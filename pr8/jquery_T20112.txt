@@ -1,0 +1,919 @@
+Practical 7 - Programs on Basic jQuery
+Practical 7. a)
+Aim: jQuery Basic, jQuery Events
+Solution:
+I.
+
+Write a Jquery to Change text contents of the elements on button click.
+Code:
+<!doctype html>
+<html>
+<head>
+<title>Online jQuery Editor</title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function() {
+{
+$("button").click(
+function() {
+document.write("hello world");
+}
+);
+}
+});
+</script>
+</head>
+<body>
+<p>Hello! Welcome in Jquery Language!!</p>
+<button>Click me</button>
+</body>
+</html>
+
+Output:
+
+II.
+
+Write a Jquery to Select elements by class name,id and element name.
+
+Sweta Prajapati, T.20.112
+
+Code:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".class1").css("background", "#ADF7F7");
+$("#id1").css("background", "#DEC7FF");
+$("h2").css("background", "#C5F0D0");
+});
+</script>
+</head>
+<body>
+<p class="class1">Hello!</p>
+<p id="id1">Students</p>
+<h2>welcome in jquery Language!!</h2>
+</body>
+</html>
+
+Output:
+
+III.
+
+Write a Jquery to show the use of Click(), hover(), on(), trigger(), off()
+events.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+
+Sweta Prajapati, T.20.112
+
+$(document).ready(function () {
+$("#b1").hover(function () {
+document.write("hello world");
+});
+$("p").on("click", function () {
+$(this).css("background-color", "pink");
+});
+$("#b2").click(function () {
+$("p").off("click");
+});
+$("#b3").on("click", function () {
+$("#t1").hide();
+});
+$("input").select(function () {
+$("input").after(" Text marked!");
+});
+$("#b4").click(function () {
+$("input").trigger("select");
+});
+});
+</script>
+</head>
+<body>
+<button id="b1">hover</button><br />
+<p>hello welcome in Mulund college of commerce!!</p>
+<p>TYIT students</p>
+<button id="b2">off</button><br /><br />
+<p id="t1">Hello world</p>
+<br />
+<button id="b3">on</button><br /><br />
+<input type="text" value="Hello World" /><br /><br />
+<button id="b4">trigger</button>
+</body>
+</html>
+
+Sweta Prajapati, T.20.112
+
+Output:
+
+After Hovering on Hover Button
+
+Sweta Prajapati, T.20.112
+
+Practical 7.b)
+Aim: jQuery Selectors, jQuery Hide and Show effects.
+I.
+
+Write a Jquery to Create animated show hide effect.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$("#b1").click(function () {
+$("p").hide();
+});
+$("#b2").click(function () {
+$("p").show();
+});
+});
+</script>
+</head>
+<body>
+<p>Mulund College Of Commerce</p>
+<button id="b1">Hide</button>
+<button id="b2">Show</button>
+</body>
+</html>
+
+Output:
+
+After clicking Show Button
+
+Sweta Prajapati, T.20.112
+
+After Clicking Hide Button
+
+II.
+
+Write a Jquery to create a simple toggle effect.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$("p").toggle();
+});
+});
+</script>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<button>Toggle between hide() and show()</button>
+</body>
+</html>
+Output:
+
+Sweta Prajapati, T.20.112
+
+Practical 7.c)
+Aim: jQuery fading effects, jQuery Sliding effects
+
+I.
+
+Write a Jquery to create fade-in and fade-out effect.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".btn1").click(function () {
+$("p").fadeOut();
+});
+$(".btn2").click(function () {
+$("p").fadeIn();
+});
+});
+</script>
+</head>
+<body>
+<p>SIES college of arts science and commerce</p>
+<button class="btn1">Fade out</button>
+<button class="btn2">Fade in</button>
+</body>
+</html>
+Output:
+
+Sweta Prajapati, T.20.112
+
+II.
+
+Write a Jquery to Create fade toggle effect.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".toggle-btn").click(function () {
+$("p").fadeToggle();
+});
+});
+</script>
+</head>
+<body>
+<button type="button" class="toggle-btn">click</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+</body>
+</html>
+
+Output:
+
+Sweta Prajapati, T.20.112
+
+III.
+
+Write a Jquery to Create slide-up and slide-down effect.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".up-btn").click(function () {
+$("p").slideUp();
+});
+$(".down-btn").click(function () {
+$("p").slideDown();
+});
+});
+</script>
+</head>
+<body>
+<button type="button" class="up-btn">Slide Up Paragraphs</button>
+<button type="button" class="down-btn">Slide Down
+Paragraphs</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+</body>
+</html>
+
+Output:
+Slide Down effect
+
+Slide Up effect
+
+Sweta Prajapati, T.20.112
+
+IV.
+
+Write a Jquery to Create slide toggle effect.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".toggle-btn").click(function () {
+$("p").slideToggle();
+});
+});
+</script>
+</head>
+<body>
+<button type="button" class="toggle-btn">Slide Toggle
+Paragraphs</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+</body>
+</html>
+
+Output:
+
+Sweta Prajapati, T.20.112
+
+Sweta Prajapati, T.20.112
+
+Practical 8 - jQuery Advanced
+Practical 8.a)
+Aim: jQuery Animation effects, jQuery Chaining.
+I.
+
+Write a Jquery Create animation effect.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<style>
+img {
+position: relative; /* Required to move element */
+}
+</style>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$("img").animate({ left: 300 });
+});
+});
+</script>
+</head>
+<body>
+<button>Start Animation</button><br />
+<img src="jquery.png" alt="jQuery" height="270px" width="240px" />
+</body>
+</html>
+
+Output:
+
+Sweta Prajapati, T.20.112
+
+II.
+
+Write a Jquery to animate multiple CSS properties.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<style type="text/css">
+.box {
+width: 100px;
+
+Sweta Prajapati, T.20.112
+
+height: 100px;
+background: #9d7ede;
+margin-top: 30px;
+border-style: solid;
+border-color: #6f40ce;
+}
+</style>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$(".box").animate({
+width: "300px",
+height: "300px",
+marginLeft: "150px",
+borderWidth: "10px",
+opacity: 0.5,
+});
+});
+});
+</script>
+</head>
+<body>
+<button type="button">Start Animation</button>
+<div class="box"></div>
+</body>
+</html>
+
+Output:
+
+Sweta Prajapati, T.20.112
+
+III.
+
+Write a Jquery to perform Method chaining.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+});
+});
+</script>
+</head>
+<body>
+<p id="p1">Welcome in jQuery!!</p>
+<button>Click me</button>
+</body>
+</html>
+
+Output:
+
+Sweta Prajapati, T.20.112
+
+Sweta Prajapati, T.20.112
+
+Practical 8.b)
+Aim: jQuery Callback, jQuery Get and Set Contents.
+I. Write a Jquery effect method with a callback function.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$("p").hide("slow", function () {
+alert("The paragraph is now hidden");
+});
+});
+});
+</script>
+</head>
+<body>
+<button>click</button>
+<p>This is a paragraph</p>
+</body>
+</html>
+
+Output:
+
+After Clicking button
+
+Sweta Prajapati, T.20.112
+
+II.
+
+Write a Jquery to get and set text contents of the elements.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".b1").click(function () {
+var str = $("p").text();
+alert(str);
+});
+$(".b2").click(function () {
+$("p").text("This is demo text.");
+});
+});
+</script>
+</head>
+<body>
+<button class="b1">Get All Paragraph's Text</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button class="b2">Set All Paragraph's Text</button>
+<p>This is a test paragraph.</p>
+
+Sweta Prajapati, T.20.112
+
+<p>This is another test paragraph.</p>
+</body>
+</html>
+
+Output:
+
+Clicking Get all paragraph’s text
+
+Sweta Prajapati, T.20.112
+
+Clicking Set all paragraph’s text
+
+III. Write a Jquery to get and set HTML contents of the elements.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".b1").click(function () {
+var str = $("p").html();
+alert(str);
+});
+$(".b2").click(function () {
+$("body").html("<p>Hello World!</p>");
+});
+});
+</script>
+</head>
+<body>
+<button class="b1">Get Paragraph's HTML Contents</button>
+<p>The quick <b>brown fox</b> jumps over the lazy dog.</p>
+<button class="b2">Write Message</button>
+</body>
+</html>
+
+Sweta Prajapati, T.20.112
+
+Output:
+
+Clicking Get paragraph’s HTML content
+
+Clicking Write message
+
+IV.
+
+Write a Jquery to get and set value of attribute of an element.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".b1").click(function () {
+var str = $("img#jquery").attr("alt");
+alert(str);
+});
+$(".b2").click(function () {
+
+Sweta Prajapati, T.20.112
+
+$('input[type="checkbox"]').attr("checked", "checked");
+});
+});
+</script>
+</head>
+<body>
+<button class="b1">Get Link's HREF Attribute</button>
+<img id="jquery" src="jquery.png" alt="jquery" height="290px"
+width="250px" /><br /><br />
+<p><input type="checkbox" />I agree with terms and conditions.</p>
+<button class="b2">Check</button>
+</body>
+</html>
+
+Output:
+
+Clicking Get link’s HREF attribute
+
+Sweta Prajapati, T.20.112
+
+Practical 8.c)
+Aim: jQuery Insert Content, jQuery Remove Elements and Attribute.
+I.
+
+Write a Jquery to insert HTML elements at the beginning and end of the
+elements.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".b1").click(function () {
+$("p").prepend("<strong>Note:</strong> ");
+});
+$(".b2").click(function () {
+$("#container").append("This is demo text.");
+});
+});
+</script>
+</head>
+<body>
+<button class="b1">Insert Text at Begin</button>
+<p>welcome in Jquery</p>
+<button class="b2">Insert Text at End</button>
+<div id="container">
+<p>Mulund College of Commerce</p>
+</div>
+</body>
+</html>
+
+Output:
+
+Sweta Prajapati, T.20.112
+
+Insert Text at begin
+
+Insert text at end
+
+II.
+
+Write a Jquery to insert multiple HTML elements at the beginning and end
+of the elements.
+Code:
+<!DOCTYPE html>
+<html>
+
+Sweta Prajapati, T.20.112
+
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".b1").click(function () {
+var newHeading = "<h1>Important Note:</h1>";
+var newParagraph = document.createElement("p");
+newParagraph.innerHTML = "<em>hello world</em>";
+$("body").append(newHeading, newParagraph);
+});
+});
+</script>
+</head>
+<body>
+<button class="b1">Insert Contents</button>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</body>
+</html>
+
+Output:
+
+III.
+
+Write a Jquery to insert
+
+multiple HTML elements before and after the elements.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+Sweta Prajapati, T.20.112
+
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".b1").click(function () {
+var newHeading = "<h1>Important Note:</h1>";
+var newParagraph = document.createElement("p");
+newParagraph.innerHTML = "<em>Lorem Ipsum is dummy
+text...</em>";
+$("p").before(newHeading, newParagraph);
+});
+$(".b2").click(function () {
+var newHeading = "<h1>Important Note:</h1>";
+var newParagraph = document.createElement("p");
+newParagraph.innerHTML = "<em>Lorem Ipsum is dummy
+text...</em>";
+$("body").append(newHeading, newParagraph);
+});
+});
+</script>
+</head>
+<body>
+<button class="b1">Insert Contents Begin</button>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<button class="b2">Insert Contents End</button>
+</body>
+</html>
+
+Output:
+
+Sweta Prajapati, T.20.112
+
+Insert at beginning
+
+Insert at end
+
+IV.
+
+Write a Jquery to remove the contents of the elements.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".btn").click(function () {
+$("div#demo").remove();
+});
+});
+</script>
+</head>
+<body>
+<div id="demo">
+
+Sweta Prajapati, T.20.112
+
+<p>Inside Div Element</p>
+</div>
+<p>Outside Div element</p>
+<button class="btn">Hide the elements inside div</button>
+</body>
+</html>
+
+Output:
+
+V.
+
+Write a Jquery to remove the parent element of an HTML element from the
+page.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$("p").unwrap();
+});
+});
+</script>
+<style>
+div {
+
+Sweta Prajapati, T.20.112
+
+background-color: yellow;
+}
+article {
+background-color: pink;
+}
+</style>
+</head>
+<body>
+<div>
+<p>This is a paragraph inside a div element.</p>
+</div>
+<article>
+<p>This is a paragraph inside an article element.</p>
+</article>
+<button>Remove the parent element of each p element</button>
+</body>
+</html>
+
+Output:
+
+VI.
+
+Write a Jquery to remove an attribute from the HTML elements.
+
+Sweta Prajapati, T.20.112
+
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$("p").removeAttr("style");
+});
+});
+</script>
+<style>
+div {
+background-color: yellow;
+}
+article {
+background-color: pink;
+}
+</style>
+</head>
+<body>
+<h1>This is a heading</h1>
+<p style="font-size: 120%; color: red">This is a paragraph.</p>
+<p style="font-weight: bold; color: blue">This is another
+paragraph.</p>
+<button>Remove the style attribute from all p elements</button>
+</body>
+</html>
+
+Output:
+
+Sweta Prajapati, T.20.112
+
+VII.
+
+Write a Jquery to add and remove CSS classes from the HTML elements.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$("p").removeClass("intro");
+});
+});
+</script>
+<style>
+.intro {
+font-size: 120%;
+color: red;
+}
+</style>
+
+Sweta Prajapati, T.20.112
+
+</head>
+<body>
+<h1>This is a heading</h1>
+<p class="intro">This is a paragraph.</p>
+<p class="intro">This is another paragraph.</p>
+<button>Remove the "intro" class from all p elements</button>
+</body>
+</html>
+
+Output:
+
+VIII.
+
+Write a Jquery to set the duration in slide toggle effect.
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$(".b1").click(function () {
+$(".box").slideToggle();
+
+Sweta Prajapati, T.20.112
+
+});
+});
+</script>
+</head>
+<body>
+<button type="button" class="b1">Slide Toggle</button>
+<hr />
+<div class="box">
+<div class="box-inner">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu
+sem
+tempor, varius quam at, luctus dui.
+</div>
+</div>
+</body>
+</html>
+
+Output:
+
+IX.
+
+Write a Jquery to remove the HTML elements from the page.
+
+Code:
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$("#div1").remove();
+});
+});
+
+Sweta Prajapati, T.20.112
+
+</script>
+</head>
+<body>
+<div
+id="div1"
+style="
+height: 100px;
+width: 300px;
+border: 1px solid black;
+background-color: #bcf0f5;
+"
+>
+This is some text in the div.
+<p>This is a paragraph in the div.</p>
+<p>This is another paragraph in the div.</p>
+</div>
+<br />
+<button>Remove div element</button>
+</body>
+</html>
+
+Output:
+
+Sweta Prajapati, T.20.112
+
+
