@@ -1,0 +1,38 @@
+first Take Java Driver where your all Java Code is written
+
+
+
+
+				:-  Insert :-
+
+javac -cp ".;mongo-java-driver-3.12.14.jar" InsertDoc.java
+
+java -cp ".;mongo-java-driver-3.12.14.jar" InsertDoc
+
+				
+
+
+				:- Read(retrieve):-
+
+javac -cp ".;mongo-java-driver-3.12.14.jar" Retrive.java
+java -cp ".;mongo-java-driver-3.12.14.jar" Retrive 
+
+
+
+
+				:- Update :-
+
+
+javac -cp ".;mongo-java-driver-3.12.14.jar" Update.java
+java -cp ".;mongo-java-driver-3.12.14.jar" Update
+
+
+
+				:- Delete :-
+
+javac -cp ".;mongo-java-driver-3.12.14.jar" DeleteDoc.java
+java -cp ".;mongo-java-driver-3.12.14.jar" DeleteDoc    
+
+
+
+
